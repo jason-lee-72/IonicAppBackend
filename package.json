@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Backend for the ionic test app",
   "engines": {
-    "node": "5.9.1"
+    "node": "6.1.0"
   },
   "main": "server.js",
   "scripts": {
