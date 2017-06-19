@@ -8,7 +8,6 @@ var requireAuth = passport.authenticate('jwt', {session: false}),
     requireLogin = passport.authenticate('local', {session: false});
  
 module.exports = function(app){
- 
     var apiRoutes = express.Router(),
         authRoutes = express.Router();
         // todoRoutes = express.Router();
@@ -32,5 +31,4 @@ module.exports = function(app){
  
     // Set up routes
     app.use('/api', apiRoutes);
- 
 }

@@ -34,11 +34,11 @@ exports.register = function(req, res, next){
     var role = req.body.role;
  
     if(!email){
-        return res.status(422).send({error: 'You must enter an email address'});
+        return res.status(422).send({error: 'You must supply an email address.'});
     }
  
     if(!password){
-        return res.status(422).send({error: 'You must enter a password'});
+        return res.status(422).send({error: 'You must supply a password.'});
     }
  
     User.findOne({email: email}, function(err, existingUser){
@@ -48,7 +48,7 @@ exports.register = function(req, res, next){
         }
  
         if(existingUser){
-            return res.status(422).send({error: 'That email address is already in use'});
+            return res.status(422).send({error: 'Email address already in use.'});
         }
  
         var user = new User({
